@@ -40,4 +40,4 @@ properties:
       vault: PGPASSWORD
     DB_PASSWORD:
       vault: KEYCLOAKDB_PASSWORD
-    revision : 77
+    revision : 78
