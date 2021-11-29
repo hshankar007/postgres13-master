@@ -38,6 +38,6 @@ properties:
     POSTGRESQL_REP_USER: replica
     PGPASSWORD: 
       vault: PGPASSWORD
-      DB_PASSWORD:
-        vault: KEYCLOAKDB_PASSWORD
+    DB_PASSWORD:
+      vault: KEYCLOAKDB_PASSWORD
     revision : 76
