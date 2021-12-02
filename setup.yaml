@@ -1,14 +1,29 @@
+#users:
+#  - name: keycloak
+#    password: $KEYCLOAKDB_PASSWORD
+#    role: superuser
+#databases:
+#  - name: keycloak
+#    owner: keycloak
+#    tablespace:
+#      - name: tb1
+#        location: /appz/data/tb1
+#    schemas:
+#      - name: public
+#        authorised_user: keycloak
+#        search_path: true       
+        
 users:
-  - name: keycloak
-    password: $KEYCLOAKDB_PASSWORD
+  - name: sonaruser
+    password: $SONAR_JDBC_PASSWORD
     role: superuser
 databases:
-  - name: keycloak
-    owner: keycloak
+  - name: sonarqube
+    owner: sonaruser
     tablespace:
       - name: tb1
         location: /appz/data/tb1
     schemas:
       - name: public
-        authorised_user: keycloak
+        authorised_user: sonaruser
         search_path: true
