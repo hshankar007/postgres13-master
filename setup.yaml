@@ -14,16 +14,16 @@
 #        search_path: true       
         
 users:
-  - name: sonaruser
-    password: $SONAR_JDBC_PASSWORD
+  - name: dotnet
+    password: $POSTGRESQL_DOTNET_PASSWORD
     role: superuser
 databases:
-  - name: sonarqube
-    owner: sonaruser
+  - name: dotnet
+    owner: dotnet
     tablespace:
-      - name: tb1
-        location: /appz/data/tb1
+      - name: tb2
+        location: /appz/data/tb2
     schemas:
-      - name: public
-        authorised_user: sonaruser
+      - name: schema2
+        authorised_user: dotnet
         search_path: true
