@@ -40,7 +40,7 @@ properties:
       vault: PGPASSWORD
     KEYCLOAKDB_PASSWORD:
       vault: KEYCLOAKDB_PASSWORD
-    SONAR_JDBC_PASSWORD: 
-      vault: SONAR_JDBC_PASSWORD
+    POSTGRESQL_DOTNET_PASSWORD:
+      vault: POSTGRESQL_DOTNET_PASSWORD
     
     revision : 79
