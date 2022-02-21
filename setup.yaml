@@ -1,24 +1,21 @@
-#users:
-#  - name: keycloak
-#    password: $KEYCLOAKDB_PASSWORD
-#    role: superuser
-#databases:
-#  - name: keycloak
-#    owner: keycloak
-#    tablespace:
-#      - name: tb1
-#        location: /appz/data/tb1
-#    schemas:
-#      - name: public
-#        authorised_user: keycloak
-#        search_path: true       
-        
 users:
+  - name: springbootweb
+    password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
+    role: superuser
   - name: dotnet
     password: $POSTGRESQL_DOTNET_PASSWORD
     role: superuser
 databases:
-  - name: accounts
+  - name: springbootweb
+    owner: springbootweb
+    tablespace:
+      - name: tb1
+        location: /appz/data/tb1
+    schemas:
+      - name: schema1
+        authorised_user: springbootweb
+        search_path: true
+  - name: dotnet
     owner: dotnet
     tablespace:
       - name: tb2
@@ -27,11 +24,11 @@ databases:
       - name: schema2
         authorised_user: dotnet
         search_path: true
-        
+   
 restore:
-  - database: accounts
+  - database: springbootweb
     source:
       url: 'https://www.ecloudcontrol.com/wp-content/uploads/2021/06/accountsdb-springboot.sql_.zip'
-    user: postgres.log
-    password: $POSTGRESQL_DOTNET_PASSWORD
-    token: 20220221-0908
+    user: springbootweb
+    password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
+    token: 20220221-0912
