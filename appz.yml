@@ -29,7 +29,7 @@ volumes:
     
 properties:
     POSTGRESQL_REPLICATION_MODE: master
-    POSTGRESQL_DATA: /appz/data
+    POSTGRESQL_DATA: /appz/data/psql
     POSTGRESQL_CONNECTUSER: postgres
     POSTGRESQL_CONNECTIONDB: postgres
     POSTGRESQL_PORT: 5432
